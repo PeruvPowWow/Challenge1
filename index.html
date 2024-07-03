@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+
+    <title>ProjectPal</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">ProjectPal</h1>
+      <hr>
+    </header>
+
+    <main>
+
+    <div class="container-left">
+        
+      <input class="input" id="projTitle" placeholder="Title"></input>
+
+      <textarea class="input" id="description" placeholder="Description"></textarea>
+
+      <input class="input" id="dueDate" type="date" placeholder="Due Date"></input>
+
+      <select class="input" name="priority" id="priority">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+
+      <button class="button" type="submit">Submit</button>
+    </div>
+
+    <div class="container-right">
+        <article>
+            <p>Title: Title goes here</p>
+            <p>Description goes here</p>
+            <p>Priority: High</p>
+            <p>Due Date: 01/01/2024</p>
+        </article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </div>
+
+    </main>
+
+    <footer>
+        <hr>
+        Created by 08-team (2024)
+    </footer>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
