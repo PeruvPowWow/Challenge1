@@ -11,6 +11,5 @@ function createCardObjects() {
         "Due Date": formDueDate,
         Priority: formPriority
     }
+    localStorage.setItem('cardObject', JSON.stringify(cardObject));
 }
-
-const newVariable = 0;
