@@ -1,0 +1,58 @@
+header {
+  width: auto;
+  height: 145px;
+  text-align: right;
+  padding: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.container-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  align-content: center;
+  flex-direction: column;
+  width: 300px;
+  margin-left: 10px;
+  padding-top: 60px;
+}
+
+.container-right {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 900px;
+}
+
+article {
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  border-radius: 7px;
+  margin: 5px;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 5px;
+}
+
+input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  width: 250px;
+  padding: 15px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
