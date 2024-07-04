@@ -5,18 +5,6 @@ const formDescription = document.querySelector("#form-description");
 const formDueDate = document.querySelector("#form-duedate");
 const formPriority = document.querySelector("#form-priority");
 
-// function createCardObjects(event) {
-//   event.preventDefault();
-
-//   let cardObject = {
-//     Title: formTitle,
-//     Description: formDescription,
-//     "Due Date": formDueDate,
-//     Priority: formPriority,
-//   };
-//   localStorage.setItem("cardObject", JSON.stringify(cardObject));
-// }
-
 // Submit button
 const submit = document.getElementById("submit");
 submit.addEventListener("click", addArticle);
@@ -48,4 +36,24 @@ function addArticle() {
   article.appendChild(priority);
   article.appendChild(description);
   formContainer.appendChild(article);
+}
+
+// Local Storage Functions for Getting and Setting
+
+function setLocalStorageObj(element, obj) {
+  LocalStorage.setItem(element, JSON.stringify(obj));
+}
+
+function setLocalStorageItem(element, item) {
+  LocalStorage.setItem(element, item);
+}
+
+function getLocalStorageObj(obj) {
+  const localStorageObj = JSON.parse(localStorage.getItem(obj));
+  return localStorageObj;
+}
+
+function getLocalStorageItem(item) {
+  const localStorageItem = localStorage.getItem(item);
+  return localStorageItem;
 }
