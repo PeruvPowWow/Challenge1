@@ -5,6 +5,14 @@ const formDescription = document.querySelector("#form-description");
 const formDueDate = document.querySelector("#form-duedate");
 const formPriority = document.querySelector("#form-priority");
 
+// Global Variables
+
+let storedTaskCards = [];
+
+// Initialization Function
+
+updateCardStorage();
+
 // Submit button
 const submit = document.getElementById("submit");
 submit.addEventListener("click", addArticle);
@@ -17,8 +25,37 @@ function addArticle() {
     Priority: formPriority.value,
   };
 
-  localStorage.setItem("newCard", JSON.stringify(newCard));
+  storedTaskCards.push(newCard);
 
+  setLocalStorageObj("Task Cards", storedTaskCards);
+  createTaskCards();
+}
+
+// This function is only called once when the page is first loaded.
+function renderStoredTaskCards() {
+  for (let i = 0; i < storedTaskCards.length; i++) {
+    const article = document.createElement("article");
+
+    const title = document.createElement("h2");
+    const description = document.createElement("h3");
+    const duedate = document.createElement("p");
+    const priority = document.createElement("p");
+
+    title.textContent = storedTaskCards[i].Title;
+    description.textContent = storedTaskCards[i].Description;
+    duedate.textContent = "Due: " + storedTaskCards[i]["Due Date"];
+    priority.textContent = "Priority: " + storedTaskCards[i].Priority;
+
+    article.appendChild(title);
+    article.appendChild(duedate);
+    article.appendChild(priority);
+    article.appendChild(description);
+    formContainer.appendChild(article);
+  }
+}
+
+// This function is called every time the "submit" button is pressed.
+function createTaskCards() {
   const article = document.createElement("article");
 
   const title = document.createElement("h2");
@@ -38,14 +75,24 @@ function addArticle() {
   formContainer.appendChild(article);
 }
 
+function updateCardStorage(){
+  const storedTasks = getLocalStorageObj("Task Cards");
+  if (storedTasks !== null) {
+    storedTaskCards = storedTasks;
+    renderStoredTaskCards();
+  } else {
+    return;
+  }
+}
+
 // Local Storage Functions for Getting and Setting
 
 function setLocalStorageObj(element, obj) {
-  LocalStorage.setItem(element, JSON.stringify(obj));
+  localStorage.setItem(element, JSON.stringify(obj));
 }
 
 function setLocalStorageItem(element, item) {
-  LocalStorage.setItem(element, item);
+  localStorage.setItem(element, item);
 }
 
 function getLocalStorageObj(obj) {
