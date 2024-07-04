@@ -1,8 +1,8 @@
 header {
   width: auto;
   height: 145px;
-  text-align: right;
-  padding: 50px;
+  /* text-align: right; */
+  padding: 30px;
 }
 
 main {
@@ -12,43 +12,71 @@ main {
   margin-top: 10px;
 }
 
+/* User input container */
 .container-left {
   display: flex;
   flex-wrap: wrap;
-  align-items: space-between;
   align-content: center;
   flex-direction: column;
   width: 300px;
   margin-left: 10px;
-  padding-top: 60px;
+  padding-top: 10px;
 }
 
+/* Displayed user input container */
 .container-right {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  max-width: 900px;
+  max-width: 899px;
+  max-height: 425px;
+  overflow: auto;
 }
 
+/* Used to append an element for data to populate */
 article {
-  width: 200px;
+  width: 195px;
   height: 200px;
-  border: 2px solid;
+  border: 1px solid;
   border-radius: 7px;
   margin: 5px;
   margin-top: 10px;
   margin-left: 20px;
   padding: 5px;
+  font-size: 0.85rem;
+  /* Use innerHTML to add classes to child elements? */
 }
 
+article:hover {
+  box-shadow: 0 0 0.5em gray;
+}
+
+/* article elements - do not use outside of article */
+h2 {
+  max-width: 190px;
+  border-bottom: 1px solid;
+}
+
+p {
+  text-align: right;
+}
+
+h3 {
+  overflow: auto;
+  max-height: 120px;
+}
+
+/* Input fields - title + due date */
 input {
   padding: 5px;
-  margin-bottom: 10px;
 }
 
+/* Input field - description */
 textarea {
+  display: flex;
   resize: none;
   width: 250px;
+  height: 100px;
   padding: 15px;
 }
 
