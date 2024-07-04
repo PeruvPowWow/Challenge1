@@ -17,6 +17,7 @@ updateCardStorage();
 const submit = document.getElementById("submit");
 submit.addEventListener("click", addArticle);
 
+// Creates a new task object with Title, Description, Due-Date and Priority. Adds the object to storage and calls a function to create the new task.
 function addArticle() {
   const newCard = {
     Title: formTitle.value,
@@ -31,7 +32,7 @@ function addArticle() {
   createTaskCards();
 }
 
-// This function is only called once when the page is first loaded.
+// Called once when the page is first loaded. Creates each "task card" that was in local storage.
 function renderStoredTaskCards() {
   for (let i = 0; i < storedTaskCards.length; i++) {
     const article = document.createElement("article");
@@ -50,11 +51,11 @@ function renderStoredTaskCards() {
     article.appendChild(duedate);
     article.appendChild(priority);
     article.appendChild(description);
-    formContainer.appendChild(article);
+    formContainer.appendChild(article); 
   }
 }
 
-// This function is called every time the "submit" button is pressed.
+// Called every time the "submit" button is pressed. Creates a new task and appends it to the DOM.
 function createTaskCards() {
   const article = document.createElement("article");
 
@@ -75,6 +76,7 @@ function createTaskCards() {
   formContainer.appendChild(article);
 }
 
+// Gets the storedTaskCards object array in local storage, if there is one.
 function updateCardStorage(){
   const storedTasks = getLocalStorageObj("Task Cards");
   if (storedTasks !== null) {
@@ -85,7 +87,7 @@ function updateCardStorage(){
   }
 }
 
-// Local Storage Functions for Getting and Setting
+// Local Storage Functions for Getting and Setting.
 
 function setLocalStorageObj(element, obj) {
   localStorage.setItem(element, JSON.stringify(obj));
