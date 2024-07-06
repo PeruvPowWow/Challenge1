@@ -55,6 +55,7 @@ article:hover {
 h2 {
   max-width: 190px;
   border-bottom: 1px solid;
+  text-align: center;
 }
 
 p {
@@ -71,13 +72,8 @@ input {
   padding: 5px;
 }
 
-/* Input field - description */
-textarea {
-  display: flex;
-  resize: none;
-  width: 250px;
-  height: 100px;
-  padding: 15px;
+button .delete {
+  text-align: right;
 }
 
 footer {

@@ -37,12 +37,16 @@ function addArticle() {
   const description = document.createElement("h3");
   const duedate = document.createElement("p");
   const priority = document.createElement("p");
+  const deleteBtn = document.createElement("button");
+
+  deleteBtn.classList.add("delete");
 
   title.textContent = formTitle.value;
   description.textContent = formDescription.value;
   duedate.textContent = "Due: " + formDueDate.value;
   priority.textContent = "Priority: " + formPriority.value;
 
+  article.appendChild(deleteBtn);
   article.appendChild(title);
   article.appendChild(duedate);
   article.appendChild(priority);
