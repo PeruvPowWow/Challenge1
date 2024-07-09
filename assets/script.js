@@ -7,6 +7,7 @@ const formPriority = document.querySelector("#form-priority");
 
 // Global Variables
 
+let projects = [];
 let storedTaskCards = [];
 
 // Initialization Function
