@@ -1,7 +1,12 @@
 :root {
   --background-color: white;
   --text-color: black;
-  --circle-color: blue;
+  --input-background: white;
+  --input-text-color:black;
+  --button-background: white;
+  --button-text-color: black;
+  --footer-background: white;
+  --footer-text-color: black;
 }
 
 body {
@@ -15,7 +20,12 @@ body {
 body.dark-mode {
   --background-color: rgb(50, 48, 48);
   --text-color: white;
-  --circle-color: red;
+  --input-background: rgb(50, 48, 48);
+  --input-text-color: white;
+  --button-background: rgb(50, 48, 48);
+  --button-text-color: white;
+  --footer-background: rgb(50, 48, 48);
+  --footer-text-color: white;
 }
 header {
   width: auto;
@@ -58,20 +68,26 @@ article {
   margin-top: 10px;
   margin-left: 20px;
   padding: 5px;
+  background-color: var(--input-background);
+  color: var(--input-text-color);
 }
 
-input {
+input,textarea,select, button {
   padding: 5px;
   margin-bottom: 10px;
+  background-color: var(--input-background);
+  color: var(--input-text-color);
 }
 
-textarea {
-  resize: none;
-  width: 250px;
-  padding: 15px;
+button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
 }
 
 footer {
+  background-color: var(--footer-background);
+  color: var(--footer-text-color);
   margin-top: 20px;
   text-align: center;
+  padding: 10px;
 }
