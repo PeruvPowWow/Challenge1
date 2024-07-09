@@ -1,5 +1,5 @@
-# Challenge1
-
+# Challenge 1: ProjectPal
+ProjectPAL
 
 ## Overview
 
@@ -11,6 +11,21 @@
 
 ## Usage
 
+## Technologies Used
+
+## Future Improvements
+
+## Project Structure
+
+## Customzation
+
+## Contributing
+
+## Conclusion
+
+## Deployment Link
+
+## Repository Link
 
 
 Team Checklist: 
