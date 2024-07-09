@@ -43,6 +43,16 @@ To run this project, all you need is a modern web browser
 
 ## Project Structure
 
+projectpal/
+│
+├── assets/
+│   ├── styles.css      # Main stylesheet
+│   ├── script.js       # JavaScript for form handling
+│   └── logic.js        # JavaScript for theme toggling
+│
+├── index.html          # Main HTML file
+└── README.md           # Project README file
+
 ## Customzation
 
 ## Contributing
