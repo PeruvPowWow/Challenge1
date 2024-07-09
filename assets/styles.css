@@ -1,3 +1,8 @@
+:root {
+  --background-color: white;
+  --text-color: black;
+}
+
 header {
   width: auto;
   height: 145px;
