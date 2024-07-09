@@ -41,6 +41,10 @@ To run this project, all you need is a modern web browser
 
 ## Future Improvements
 
+* Project Editing: Allow users to edit existing projects
+* User authentication: Add user login and registration features
+* Enhanced UI/UX: Further improve the design and usability
+
 ## Project Structure
 
 projectpal/
@@ -53,20 +57,18 @@ projectpal/
 ├── index.html          # Main HTML file
 └── README.md           # Project README file
 
-## Customzation
-
-## Contributing
-
 ## Conclusion
 
 ## Deployment Link
+
+https://peruvpowwow.github.io/Challenge1/
 
 ## Repository Link
 
 https://github.com/PeruvPowWow/Challenge1
 
 
-Team Checklist: 
+## Team Checklist
 
 HTML
 - Create a header with the title of "Project Pal"
