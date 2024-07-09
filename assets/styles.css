@@ -1,8 +1,22 @@
 :root {
   --background-color: white;
   --text-color: black;
+  --circle-color: blue;
 }
 
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode {
+  --background-color: rgb(50, 48, 48);
+  --text-color: white;
+  --circle-color: red;
+}
 header {
   width: auto;
   height: 145px;
