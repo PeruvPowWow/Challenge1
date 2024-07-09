@@ -56,13 +56,16 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  max-width: 900px;
+  max-width: 899px;
+  max-height: 425px;
+  overflow: auto;
 }
 
+/* Used to append an element for data to populate */
 article {
-  width: 200px;
+  width: 195px;
   height: 200px;
-  border: 2px solid;
+  border: 1px solid;
   border-radius: 7px;
   margin: 5px;
   margin-top: 10px;
@@ -90,4 +93,27 @@ footer {
   margin-top: 20px;
   text-align: center;
   padding: 10px;
+  font-size: 0.85rem;
+  /* Use innerHTML to add classes to child elements? */
 }
+
+article:hover {
+  box-shadow: 0 0 0.5em gray;
+}
+
+/* article elements - do not use outside of article */
+h2 {
+  max-width: 190px;
+  border-bottom: 1px solid;
+}
+
+p {
+  text-align: right;
+}
+
+h3 {
+  overflow: auto;
+  max-height: 120px;
+}
+
+/* Input fields - title + due date */
