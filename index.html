@@ -16,41 +16,29 @@
   <body>
     <header>
       <h1 class="title">ProjectPal</h1>
-      <button id="toggle">☀️</button>
+      <button id="mode-toggle">☀️</button>
     </header>
 
     <main>
 
     <div class="container-left">
         
-      <input class="input" id="projTitle" placeholder="Title"></input>
+      <input class="input" id="form-title" placeholder="Title"></input>
 
-      <textarea class="input" id="description" placeholder="Description"></textarea>
+      <textarea class="input" id="form-description" placeholder="Description"></textarea>
 
-      <input class="input" id="dueDate" type="date" placeholder="Due Date"></input>
+      <input class="input" id="form-duedate" type="date" placeholder="Due Date"></input>
 
-      <select class="input" name="priority" id="priority">
+      <select class="input" name="priority" id="form-priority">
         <option value="high">High</option>
         <option value="medium">Medium</option>
         <option value="low">Low</option>
       </select>
 
-      <button class="button" type="submit">Submit</button>
+      <button class="button" type="submit" id="submit">Submit</button>
     </div>
 
     <div class="container-right">
-        <article>
-            <p>Title: Title goes here</p>
-            <p>Description goes here</p>
-            <p>Priority: High</p>
-            <p>Due Date: 01/01/2024</p>
-        </article>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
     </div>
 
     </main>
