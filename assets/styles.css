@@ -2,7 +2,7 @@
   --background-color: white;
   --text-color: black;
   --input-background: white;
-  --input-text-color:black;
+  --input-text-color: black;
   --button-background: white;
   --button-text-color: black;
   --footer-background: white;
@@ -37,6 +37,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: center;
   margin-top: 10px;
 }
 
@@ -53,7 +54,7 @@ main {
   flex-direction: column;
   width: 300px;
   margin-left: 10px;
-  padding-top: 60px;
+  padding-top: 10px;
 }
 
 .container-right {
@@ -79,7 +80,10 @@ article {
   color: var(--input-text-color);
 }
 
-input,textarea,select, button {
+input,
+textarea,
+select,
+button {
   padding: 5px;
   margin-bottom: 10px;
   background-color: var(--input-background);
@@ -98,11 +102,18 @@ footer {
   text-align: center;
   padding: 10px;
   font-size: 0.85rem;
-  /* Use innerHTML to add classes to child elements? */
+  position: relative;
 }
 
 article:hover {
   box-shadow: 0 0 0.5em gray;
+}
+
+.priority-div {
+  position: absolute;
+  text-align: center;
+  bottom: 5px;
+  width: 100%;
 }
 
 /* article elements - do not use outside of article */
@@ -119,5 +130,9 @@ h3 {
   overflow: auto;
   max-height: 120px;
 }
+/* article elements - do not use outside of article */
 
-/* Input fields - title + due date */
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
