@@ -27,10 +27,9 @@ body.dark-mode {
   --footer-background: rgb(50, 48, 48);
   --footer-text-color: white;
 }
+
 header {
-  width: auto;
-  height: 145px;
-  text-align: right;
+  height: 175px;
   padding: 50px;
 }
 
@@ -39,6 +38,11 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container-left {

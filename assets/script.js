@@ -18,7 +18,24 @@ updateCardStorage();
 const submit = document.getElementById("submit");
 submit.addEventListener("click", addArticle);
 
+const clear = document.getElementById("clearBtn");
+clearBtn.addEventListener("click", clearProject);
+
+
 // Creates a new task object with Title, Description, Due-Date and Priority. Adds the object to storage and calls a function to create the new task.
+
+function clearProject() {
+  if (storedTaskCards !== null) {
+    storedTaskCards = [];
+    setLocalStorageObj("Task Cards", storedTaskCards)
+    window.location.reload();
+  } else {
+    return;
+  }
+
+}
+
+
 function addArticle() {
   const newCard = {
     Title: formTitle.value,
@@ -87,6 +104,7 @@ function updateCardStorage(){
     return;
   }
 }
+
 
 // Local Storage Functions for Getting and Setting.
 

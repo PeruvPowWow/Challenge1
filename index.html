@@ -14,8 +14,8 @@
   </head>
 
   <body>
-    <header>
-      <img id="mode-img-toggle" class="title" src="./assets/images/projectpalheader.png">
+    <header class="header">
+      <img id="mode-img-toggle" src="./assets/images/projectpalheader.png">
       <button id="mode-toggle">☀️</button>
     </header>
 
@@ -25,7 +25,7 @@
         
       <input class="input" id="form-title" placeholder="Title"></input>
 
-      <textarea class="input" id="form-description" placeholder="Description"></textarea>
+      <textarea class="textarea has-fixed-size" id="form-description" placeholder="Description"></textarea>
 
       <input class="input" id="form-duedate" type="date" placeholder="Due Date"></input>
 
@@ -36,6 +36,7 @@
       </select>
 
       <button class="button" type="submit" id="submit">Submit</button>
+      <button class="button" type="submit" id="clearBtn">Clear All</button>
     </div>
 
     <div class="container-right">
