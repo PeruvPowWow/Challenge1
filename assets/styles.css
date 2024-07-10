@@ -2,7 +2,7 @@
   --background-color: white;
   --text-color: black;
   --input-background: white;
-  --input-text-color:black;
+  --input-text-color: black;
   --button-background: white;
   --button-text-color: black;
   --footer-background: white;
@@ -27,6 +27,7 @@ body.dark-mode {
   --footer-background: rgb(50, 48, 48);
   --footer-text-color: white;
 }
+
 header {
   width: auto;
   height: 145px;
@@ -75,7 +76,10 @@ article {
   color: var(--input-text-color);
 }
 
-input,textarea,select, button {
+input,
+textarea,
+select,
+button {
   padding: 5px;
   margin-bottom: 10px;
   background-color: var(--input-background);
