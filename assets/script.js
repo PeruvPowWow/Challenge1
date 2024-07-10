@@ -7,6 +7,7 @@ const formPriority = document.querySelector("#form-priority");
 
 // Global Variables
 
+let projects = [];
 let storedTaskCards = [];
 
 // Initialization Function
@@ -16,6 +17,22 @@ updateCardStorage();
 // Submit button
 const submit = document.getElementById("submit");
 submit.addEventListener("click", addArticle);
+
+const clear = document.getElementById("clearBtn");
+clearBtn.addEventListener("click", clearProject);
+
+
+function clearProject() {
+  if (storedTaskCards !== null) {
+    storedTaskCards = [];
+    setLocalStorageObj("Task Cards", storedTaskCards)
+    window.location.reload();
+  } else {
+    return;
+  }
+
+}
+
 
 // Creates a new task object with Title, Description, Due-Date and Priority.
 // Adds the object to storage and calls a function to create the new task.
@@ -108,6 +125,7 @@ function updateCardStorage() {
     return;
   }
 }
+
 
 // Local Storage Functions for Getting and Setting.
 
