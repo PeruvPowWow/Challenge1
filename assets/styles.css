@@ -33,17 +33,23 @@ header {
   padding: 50px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#mode-toggle {
+  height: 38px;
+  background-color: var(--background-color);
+}
+
+/* Contains left and right containers */
 main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   margin-top: 10px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
 }
 
 .container-left {
@@ -66,8 +72,14 @@ main {
   overflow: auto;
 }
 
-/* Used to append an element for data to populate */
+/* Aligns the text in dropdown menu */
+select {
+  text-align: center;
+}
+
+/* All user input appends into an article */
 article {
+  position: relative;
   width: 195px;
   height: 200px;
   border: 1px solid;
@@ -80,22 +92,46 @@ article {
   color: var(--input-text-color);
 }
 
-input,
-textarea,
-select,
-button {
-  padding: 5px;
-  margin-bottom: 10px;
-  background-color: var(--input-background);
-  color: var(--input-text-color);
+/* Fixes the Due Date to the bottom right of the article */
+article p {
+  position: absolute;
+  bottom: 1px;
+  right: 3px;
+  text-align: right;
+  font-size: 14px;
 }
 
-button {
-  background-color: var(--button-background);
-  color: var(--button-text-color);
+article:hover {
+  box-shadow: 0 0 0.5em gray;
 }
+
+/* vv article elements - do not use outside of article vv */
+/* Title attributes */
+h2 {
+  max-width: 190px;
+  max-height: 25px;
+  border-bottom: 1px solid;
+  overflow: auto;
+}
+
+/* Description attributes */
+h3 {
+  overflow: auto;
+  max-height: 110px;
+}
+
+/* Priority attributes */
+.priority-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+/* ^^ article elements - do not use outside of article ^^ */
 
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--footer-background);
   color: var(--footer-text-color);
   margin-top: 20px;
@@ -103,36 +139,4 @@ footer {
   padding: 10px;
   font-size: 0.85rem;
   position: relative;
-}
-
-article:hover {
-  box-shadow: 0 0 0.5em gray;
-}
-
-.priority-div {
-  position: absolute;
-  text-align: center;
-  bottom: 5px;
-  width: 100%;
-}
-
-/* article elements - do not use outside of article */
-h2 {
-  max-width: 190px;
-  border-bottom: 1px solid;
-}
-
-p {
-  text-align: right;
-}
-
-h3 {
-  overflow: auto;
-  max-height: 120px;
-}
-/* article elements - do not use outside of article */
-
-footer {
-  margin-top: 20px;
-  text-align: center;
 }
