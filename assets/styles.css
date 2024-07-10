@@ -48,8 +48,13 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: center;
+  justify-content: center;
   margin-top: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container-left {
@@ -60,16 +65,25 @@ main {
   flex-direction: column;
   width: 300px;
   margin-left: 10px;
-  padding-top: 10px;
 }
 
 .container-right {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
+  min-width: 240px;
   max-width: 899px;
-  max-height: 425px;
+  max-height: 450px;
   overflow: auto;
+  border: 5px double grey;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+input[type=date] {
+  display: block;
+  padding-left: 105px;
 }
 
 /* Aligns the text in dropdown menu */
@@ -85,8 +99,6 @@ article {
   border: 1px solid;
   border-radius: 7px;
   margin: 5px;
-  margin-top: 10px;
-  margin-left: 20px;
   padding: 5px;
   background-color: var(--input-background);
   color: var(--input-text-color);
@@ -107,7 +119,7 @@ article:hover {
 
 /* vv article elements - do not use outside of article vv */
 /* Title attributes */
-h2 {
+article h2 {
   max-width: 190px;
   max-height: 25px;
   border-bottom: 1px solid;
@@ -115,7 +127,7 @@ h2 {
 }
 
 /* Description attributes */
-h3 {
+article h3 {
   overflow: auto;
   max-height: 110px;
 }

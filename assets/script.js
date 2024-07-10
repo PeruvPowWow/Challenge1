@@ -130,142 +130,47 @@ function clearAll() {
 
 init();
 
-// // Global Variables
+// Modal Functions
 
-// let projects = [];
-// let storedTaskCards = [];
+document.addEventListener('DOMContentLoaded', () => {
+  // Functions to open and close a modal
+  function openModal($el) {
+    $el.classList.add('is-active');
+  }
 
-// // Initialization Function
+  function closeModal($el) {
+    $el.classList.remove('is-active');
+  }
 
-// updateCardStorage();
+  function closeAllModals() {
+    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+      closeModal($modal);
+    });
+  }
 
-// // Submit button
-// const submit = document.getElementById("submit");
-// submit.addEventListener("click", addArticle);
+  // Add a click event on buttons to open a specific modal
+  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
 
-// // Clear button
+    $trigger.addEventListener('click', () => {
+      openModal($target);
+    });
+  });
 
-// const clear = document.getElementById("clearBtn");
-// clearBtn.addEventListener("click", clearProject);
+  // Add a click event on various child elements to close the parent modal
+  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    const $target = $close.closest('.modal');
 
-// function clearProject() {
-//   if (storedTaskCards !== null) {
-//     storedTaskCards = [];
-//     setLocalStorageObj("Task Cards", storedTaskCards);
-//     window.location.reload();
-//   } else {
-//     return;
-//   }
-// }
+    $close.addEventListener('click', () => {
+      closeModal($target);
+    });
+  });
 
-// // Creates a new task object with Title, Description, Due-Date and Priority.
-// // Adds the object to storage and calls a function to create the new task.
-// function addArticle() {
-//   const newCard = {
-//     Title: formTitle.value,
-//     Description: formDescription.value,
-//     "Due Date": formDueDate.value,
-//     Priority: formPriority.value,
-//   };
-
-//   storedTaskCards.push(newCard);
-
-//   setLocalStorageObj("Task Cards", storedTaskCards);
-//   createTaskCards();
-// }
-
-// // Called once when the page is first loaded. Creates each "task card" that was in local storage.
-// function renderStoredTaskCards() {
-//   for (let i = 0; i < storedTaskCards.length; i++) {
-//     const article = document.createElement("article");
-//     article.setAttribute("data-index", i);
-
-//     const title = document.createElement("h2");
-//     const description = document.createElement("h3");
-//     const duedate = document.createElement("p");
-//     const priority = document.createElement("button");
-//     const priorityDiv = document.createElement("div");
-//     const deleteBtn = document.createElement("button");
-
-//     deleteBtn.setAttribute("class", "delete is-pulled-right");
-//     priorityDiv.setAttribute("class", "priority-div");
-//     priority.setAttribute("class", "button is-danger is-small");
-
-//     title.textContent = storedTaskCards[i].Title;
-//     description.textContent = storedTaskCards[i].Description;
-//     duedate.textContent = "Due: " + storedTaskCards[i]["Due Date"];
-//     priority.textContent = "Priority: " + storedTaskCards[i].Priority;
-
-//     article.appendChild(deleteBtn);
-//     article.appendChild(title);
-//     article.appendChild(duedate);
-//     article.appendChild(description);
-//     priorityDiv.appendChild(priority);
-//     article.appendChild(priorityDiv);
-//     formContainer.appendChild(article);
-//   }
-// }
-
-// // Called every time the "submit" button is pressed. Creates a new task and appends it to the DOM.
-// function createTaskCards() {
-//   const article = document.createElement("article");
-
-//   const title = document.createElement("h2");
-//   const description = document.createElement("h3");
-//   const duedate = document.createElement("p");
-//   const priority = document.createElement("p");
-//   const priorityDiv = document.createElement("div");
-//   const deleteBtn = document.createElement("button");
-
-//   priority.setAttribute("class", "button is-danger is-small");
-//   priorityDiv.setAttribute("class", "priority-div");
-//   deleteBtn.setAttribute("class", "delete is-pulled-right");
-
-//   title.textContent = formTitle.value;
-//   description.textContent = formDescription.value;
-//   duedate.textContent = "Due: " + formDueDate.value;
-//   priority.textContent = "Priority: " + formPriority.value;
-
-//   article.appendChild(deleteBtn);
-//   article.appendChild(title);
-//   article.appendChild(duedate);
-//   article.appendChild(description);
-//   priorityDiv.appendChild(priority);
-//   article.appendChild(priorityDiv);
-//   formContainer.appendChild(article);
-
-//   formTitle.value = "";
-//   formDescription.value = "";
-//   formDueDate.value = "";
-// }
-
-// // Gets the storedTaskCards object array in local storage, if there is one.
-// function updateCardStorage() {
-//   const storedTasks = getLocalStorageObj("Task Cards");
-//   if (storedTasks !== null) {
-//     storedTaskCards = storedTasks;
-//     renderStoredTaskCards();
-//   } else {
-//     return;
-//   }
-// }
-
-// // Local Storage Functions for Getting and Setting.
-
-// function setLocalStorageObj(element, obj) {
-//   localStorage.setItem(element, JSON.stringify(obj));
-// }
-
-// function setLocalStorageItem(element, item) {
-//   localStorage.setItem(element, item);
-// }
-
-// function getLocalStorageObj(obj) {
-//   const localStorageObj = JSON.parse(localStorage.getItem(obj));
-//   return localStorageObj;
-// }
-
-// function getLocalStorageItem(item) {
-//   const localStorageItem = localStorage.getItem(item);
-//   return localStorageItem;
-// }
+  // Add a keyboard event to close all modals
+  document.addEventListener('keydown', (event) => {
+    if(event.key === "Escape") {
+      closeAllModals();
+    }
+  });
+});
