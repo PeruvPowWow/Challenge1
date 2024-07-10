@@ -1,7 +1,6 @@
 header {
   width: auto;
   height: 145px;
-  /* text-align: right; */
   padding: 30px;
 }
 
@@ -9,6 +8,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: center;
   margin-top: 10px;
 }
 
@@ -44,11 +44,18 @@ article {
   margin-left: 20px;
   padding: 5px;
   font-size: 0.85rem;
-  /* Use innerHTML to add classes to child elements? */
+  position: relative;
 }
 
 article:hover {
   box-shadow: 0 0 0.5em gray;
+}
+
+.priority-div {
+  position: absolute;
+  text-align: center;
+  bottom: 5px;
+  width: 100%;
 }
 
 /* article elements - do not use outside of article */
