@@ -29,9 +29,7 @@ body.dark-mode {
 }
 
 header {
-  width: auto;
-  height: 145px;
-  text-align: right;
+  height: 175px;
   padding: 50px;
 }
 
@@ -41,6 +39,11 @@ main {
   flex-wrap: wrap;
   align-content: center;
   margin-top: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container-left {
