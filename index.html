@@ -27,7 +27,7 @@
 
       <textarea class="textarea has-fixed-size" id="form-description" placeholder="Description"></textarea>
 
-      <input class="input" id="form-duedate" type="date" placeholder="Due Date"></input>
+      <input class="input" id="form-duedate" type="date"></input>
 
       <select class="input" name="priority" id="form-priority">
         <option value="">Choose Priority Level</option>
@@ -38,6 +38,8 @@
 
       <button class="button" type="submit" id="submit">Submit</button>
       <button class="button" type="submit" id="clearBtn">Clear All</button>
+      <hr>
+      <button class="button js-modal-trigger" data-target="info-modal" id="aboutBtn">About</button>
     </div>
 
     <div class="container-right">
@@ -52,5 +54,32 @@
 
     <script src="./assets/script.js"></script>
     <script src="./assets/logic.js"></script>
+
+    <modal id="info-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title title is-1">About "ProjectPal"</p>
+        </header>
+        <section class="modal-card-body">
+          <h3 class="title is-3 title-color">What is ProjectPal?</h3>
+          <p>ProjectPal is a webpage that can be used by students to create and organize tasks in a fun and visually appealing way.</p>
+          <hr>
+          <h3 class="title is-3">How do I use ProjectPal?</h3>
+          <p></p>
+          <p class="subtitle is-5">Creating tasks is very easy!</p>
+          <ul>
+            <li>- Type in the title of your task and then a description of what you need to do to accomplish that task.</li>
+            <li>- Set a Due Date for your task and give it a priority of "High", "Medium", or "Low".</li>
+            <li>- Click the submit button and it will generate a "Task Card" for you!</li>
+          </ul>
+          <hr>
+          <h3 class="title is-3">Are my tasks saved?</h3>
+          <p>Yes! All tasks you make are automatically saved to your local storage on your computer. Every time you open up the page, it will regenerate all tasks you had previously.</p>
+          <hr>
+          <img scr="" alt="placeholder">
+        </section>
+      </div>
+    </modal>
   </body>
 </html>
