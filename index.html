@@ -15,7 +15,8 @@
 
   <body>
     <header>
-      <img src="./assets/images/projectpalheader.png">
+      <h1 class="title">ProjectPal</h1>
+      <button id="mode-toggle">☀️</button>
     </header>
 
     <main>
@@ -29,16 +30,15 @@
       <input class="input" id="form-duedate" type="date" placeholder="Due Date"></input>
 
       <select class="input" name="priority" id="form-priority">
-        <option value="HIGH">High</option>
-        <option value="MEDIUM">Medium</option>
-        <option value="LOW">Low</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
       </select>
 
       <button class="button" type="submit" id="submit">Submit</button>
     </div>
 
     <div class="container-right">
-        <!-- User input renders here -->
     </div>
 
     </main>
@@ -49,5 +49,6 @@
     </footer>
 
     <script src="./assets/script.js"></script>
+    <script src="./assets/logic.js"></script>
   </body>
 </html>
