@@ -19,13 +19,13 @@ body {
 
 body.dark-mode {
   --background-color: rgb(50, 48, 48);
-  --text-color: white;
+  --text-color: grey;
   --input-background: rgb(50, 48, 48);
-  --input-text-color: white;
+  --input-text-color: grey;
   --button-background: rgb(50, 48, 48);
-  --button-text-color: white;
+  --button-text-color: grey;
   --footer-background: rgb(50, 48, 48);
-  --footer-text-color: white;
+  --footer-text-color: grey;
 }
 
 header {
@@ -73,17 +73,18 @@ main {
   flex-direction: row;
   justify-content: center;
   min-width: 240px;
-  max-width: 899px;
+  max-width: 890px;
   max-height: 450px;
   overflow: auto;
   border: 5px double grey;
+  border-radius: 7px;
   margin-left: 10px;
-  padding: 10px;
+  padding: 5px;
 }
 
-input[type=date] {
+input[type="date"] {
   display: block;
-  padding-left: 105px;
+  text-align: center;
 }
 
 /* Aligns the text in dropdown menu */
