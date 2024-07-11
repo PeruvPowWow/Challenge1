@@ -5,6 +5,12 @@ const leftContainerPriority = document.querySelector("#form-priority");
 const leftContainerSubmitBnt = document.querySelector("#submit");
 const leftContainerClearAllBtn = document.querySelector("#clearBtn");
 const leftContainerAboutBtn = document.getElementById("aboutBtn");
+const modalHeader = document.querySelector("#modal-header");
+const modalBody = document.querySelector("#modal-body");
+const modalTitle = document.querySelector("#modal-title");
+const modalFirstQuestion = document.querySelector("#modal-question1");
+const modalSecondQuestion = document.querySelector("#modal-question2");
+const modalThirdQuestion = document.querySelector("#modal-question3");
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("mode-toggle");
@@ -42,6 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
     leftContainerClearAllBtn.classList.add("has-text-grey");
     leftContainerAboutBtn.classList.add("has-background-grey-darker");
     leftContainerAboutBtn.classList.add("has-text-grey");
+    modalHeader.classList.add("has-background-grey-darker");
+    modalHeader.classList.add("has-text-grey");
+    modalBody.classList.add("has-background-grey-darker");
+    modalBody.classList.add("has-text-grey");
+    modalTitle.classList.add("has-background-grey-darker");
+    modalTitle.classList.add("has-text-grey");
+    modalFirstQuestion.classList.add("has-background-grey-darker");
+    modalFirstQuestion.classList.add("has-text-grey");
+    modalSecondQuestion.classList.add("has-background-grey-darker");
+    modalSecondQuestion.classList.add("has-text-grey");
+    modalThirdQuestion.classList.add("has-background-grey-darker");
+    modalThirdQuestion.classList.add("has-text-grey");
     updateToggleButtonIcon();
     toggleLogoImg();
   }
@@ -62,6 +80,18 @@ document.addEventListener("DOMContentLoaded", () => {
     leftContainerClearAllBtn.classList.toggle("has-text-grey");
     leftContainerAboutBtn.classList.toggle("has-background-grey-darker");
     leftContainerAboutBtn.classList.toggle("has-text-grey");
+    modalHeader.classList.toggle("has-background-grey-darker");
+    modalHeader.classList.toggle("has-text-grey");
+    modalBody.classList.toggle("has-background-grey-darker");
+    modalBody.classList.toggle("has-text-grey");
+    modalTitle.classList.toggle("has-background-grey-darker");
+    modalTitle.classList.toggle("has-text-grey");
+    modalFirstQuestion.classList.toggle("has-background-grey-darker");
+    modalFirstQuestion.classList.toggle("has-text-grey");
+    modalSecondQuestion.classList.toggle("has-background-grey-darker");
+    modalSecondQuestion.classList.toggle("has-text-grey");
+    modalThirdQuestion.classList.toggle("has-background-grey-darker");
+    modalThirdQuestion.classList.toggle("has-text-grey");
     updateToggleButtonIcon();
     toggleLogoImg();
 

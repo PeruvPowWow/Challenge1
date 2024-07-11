@@ -52,20 +52,17 @@
         Created by 08-team (2024)
     </footer>
 
-    <script src="./assets/script.js"></script>
-    <script src="./assets/logic.js"></script>
-
     <modal id="info-modal" class="modal">
       <div class="modal-background"></div>
       <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title title is-1">About "ProjectPal"</p>
+        <header class="modal-card-head" id="modal-header">
+          <p class="modal-card-title title is-1" id="modal-title">About "ProjectPal"</p>
         </header>
-        <section class="modal-card-body">
-          <h3 class="title is-3 title-color">What is ProjectPal?</h3>
+        <section class="modal-card-body" id="modal-body">
+          <h3 class="title is-3" id="modal-question1">What is ProjectPal?</h3>
           <p>ProjectPal is a webpage that can be used by students to create and organize tasks in a fun and visually appealing way.</p>
           <hr>
-          <h3 class="title is-3">How do I use ProjectPal?</h3>
+          <h3 class="title is-3" id="modal-question2">How do I use ProjectPal?</h3>
           <p></p>
           <p class="subtitle is-5">Creating tasks is very easy!</p>
           <ul>
@@ -74,12 +71,15 @@
             <li>- Click the submit button and it will generate a "Task Card" for you!</li>
           </ul>
           <hr>
-          <h3 class="title is-3">Are my tasks saved?</h3>
+          <h3 class="title is-3" id="modal-question3">Are my tasks saved?</h3>
           <p>Yes! All tasks you make are automatically saved to your local storage on your computer. Every time you open up the page, it will regenerate all tasks you had previously.</p>
           <hr>
           <img scr="" alt="placeholder">
         </section>
       </div>
     </modal>
+
+    <script src="./assets/script.js"></script>
+    <script src="./assets/logic.js"></script>
   </body>
 </html>
