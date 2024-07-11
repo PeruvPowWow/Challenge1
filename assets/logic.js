@@ -1,4 +1,5 @@
-const projectBody = document.querySelector("#project-body")
+// Element Selectors by ID
+const projectBody = document.querySelector("#project-body");
 const leftContainerTitle = document.querySelector("#form-title");
 const leftContainerDescription = document.querySelector("#form-description");
 const leftContainerDueDate = document.querySelector("#form-duedate");
@@ -13,14 +14,19 @@ const modalFirstQuestion = document.querySelector("#modal-question1");
 const modalSecondQuestion = document.querySelector("#modal-question2");
 const modalThirdQuestion = document.querySelector("#modal-question3");
 
+// Array containing all selectors 
 let darkModeArray = [leftContainerTitle, leftContainerDescription, leftContainerDueDate, leftContainerPriority, 
     leftContainerSubmitBnt, leftContainerClearAllBtn, leftContainerAboutBtn, modalHeader, modalBody, 
     modalTitle, modalFirstQuestion, modalSecondQuestion, modalThirdQuestion];
 
+// Event Listener for initializing light/dark-mode when the page is loaded
 document.addEventListener("DOMContentLoaded", () => {
+    
+    // ID selectors for changing the logo and light/dark button
   const toggleButton = document.getElementById("mode-toggle");
   const logoImg = document.getElementById("mode-img-toggle");
 
+    // Updates the light/dark button icon based on which mode the user is in
   const updateToggleButtonIcon = () => {
     if (document.body.classList.contains("dark-mode")) {
       toggleButton.textContent = "🌙";
@@ -29,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+    // Updates the projectPal logo based on which mode the user is in
   const toggleLogoImg = () => {
     if (document.body.classList.contains("dark-mode")) {
       logoImg.src = "./assets/images/projectpalheader-dark.png";
@@ -37,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+    // Updates all elements by adding specified classes for dark-mode
   if (localStorage.getItem("dark-mode") === "enabled") {
     projectBody.classList.add("dark-mode");
     
@@ -49,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleLogoImg();
   }
 
+    // Updates all elements by toggling-on/off specified classes for dark-mode when the button is pressed
   toggleButton.addEventListener("click", () => {
     projectBody.classList.toggle("dark-mode");
 
@@ -56,10 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
         darkModeArray[i].classList.toggle("has-background-grey-darker");
         darkModeArray[i].classList.toggle("has-text-grey");
     }
-    
+
     updateToggleButtonIcon();
     toggleLogoImg();
 
+        // Saves the users current mode in local storage, Enabled = Dark-Mode ; Disabled = Light-Mode
     if (document.body.classList.contains("dark-mode")) {
       localStorage.setItem("dark-mode", "enabled");
     } else {
