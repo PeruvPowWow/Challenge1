@@ -28,6 +28,9 @@ function addArticle(event) {
 
   taskCards.push(newCard);
 
+  let priorities = ["HIGH", "MEDIUM", "LOW"];
+  taskCards.sort((a, b)=>priorities.indexOf(a.Priority) - priorities.indexOf(b.Priority));
+
   // Resets all input values to be empty
   formTitle.value = "";
   formDescription.value = "";
@@ -36,6 +39,11 @@ function addArticle(event) {
 
   storeTaskCards();
   renderTaskCards();
+}
+
+function sortTasksByPriority() { 
+  taskCards.sort();
+  return taskCards;
 }
 
 // Function to render localStorage into articles

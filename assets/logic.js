@@ -14,7 +14,7 @@ const modalFirstQuestion = document.querySelector("#modal-question1");
 const modalSecondQuestion = document.querySelector("#modal-question2");
 const modalThirdQuestion = document.querySelector("#modal-question3");
 
-// Array containing all selectors 
+// Array containing all selectors with the exception of the projectBody
 let darkModeArray = [leftContainerTitle, leftContainerDescription, leftContainerDueDate, leftContainerPriority, 
     leftContainerSubmitBnt, leftContainerClearAllBtn, leftContainerAboutBtn, modalHeader, modalBody, 
     modalTitle, modalFirstQuestion, modalSecondQuestion, modalThirdQuestion];
