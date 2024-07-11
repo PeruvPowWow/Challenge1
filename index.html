@@ -9,41 +9,42 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
-
+    <!-- Project Title -->
     <title>ProjectPal</title>
   </head>
 
   <body id="project-body">
+    <!-- Page Header -->
     <header class="header">
       <img id="mode-img-toggle" src="./assets/images/projectpalheader.png">
       <button id="mode-toggle">☀️</button>
     </header>
 
     <main class="center">
+      <!-- Left Container -->
+      <div class="container-left">
+          
+        <input class="input" id="form-title" placeholder="Title"></input>
 
-    <div class="container-left">
-        
-      <input class="input" id="form-title" placeholder="Title"></input>
+        <textarea class="textarea has-fixed-size" id="form-description" placeholder="Description"></textarea>
 
-      <textarea class="textarea has-fixed-size" id="form-description" placeholder="Description"></textarea>
+        <input class="input" id="form-duedate" type="date"></input>
 
-      <input class="input" id="form-duedate" type="date"></input>
+        <select class="input" name="priority" id="form-priority">
+          <option value="">Choose Priority Level</option>
+          <option value="HIGH">High</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="LOW">Low</option>
+        </select>
 
-      <select class="input" name="priority" id="form-priority">
-        <option value="">Choose Priority Level</option>
-        <option value="HIGH">High</option>
-        <option value="MEDIUM">Medium</option>
-        <option value="LOW">Low</option>
-      </select>
-
-      <button class="button" type="submit" id="submit">Submit</button>
-      <button class="button" type="submit" id="clearBtn">Clear All</button>
-      <hr>
-      <button class="button js-modal-trigger" data-target="info-modal" id="aboutBtn">About</button>
-    </div>
-
-    <div class="container-right">
-    </div>
+        <button class="button" type="submit" id="submit">Submit</button>
+        <button class="button" type="submit" id="clearBtn">Clear All</button>
+        <hr>
+        <button class="button js-modal-trigger" data-target="info-modal" id="aboutBtn">About</button>
+      </div>
+      <!-- Right Container - Articles are created by the user -->
+      <div class="container-right">
+      </div>
 
     </main>
 
@@ -51,7 +52,8 @@
         <hr>
         Created by 08-team (2024)
     </footer>
-
+    
+    <!-- Modal Section - Hidden by Default -->
     <modal id="info-modal" class="modal">
       <div class="modal-background"></div>
       <div class="modal-card">
@@ -79,6 +81,7 @@
       </div>
     </modal>
 
+    <!-- Javascript Files -->
     <script src="./assets/script.js"></script>
     <script src="./assets/logic.js"></script>
   </body>
