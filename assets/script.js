@@ -12,11 +12,13 @@ let taskCards = [];
 function addArticle(event) {
   event.preventDefault();
 
+  // Creates an alert if the Title, Description or Due Date input areas are empty
   if (!formTitle.value || !formDescription.value || !formDueDate.value) {
     alert("Please complete the form.");
     return;
   }
 
+  // Creates a newCard object with Title, Description, Due Date, and Priority values equal to whatever the user typed
   const newCard = {
     Title: formTitle.value,
     Description: formDescription.value,
@@ -25,6 +27,8 @@ function addArticle(event) {
   };
 
   taskCards.push(newCard);
+
+  // Resets all input values to be empty
   formTitle.value = "";
   formDescription.value = "";
   formDueDate.value = "";
@@ -74,6 +78,7 @@ function renderTaskCards() {
         break;
     }
 
+    // Appends each part of the article to the page
     article.appendChild(deleteBtn);
     article.appendChild(title);
     priorityDiv.appendChild(priority);
@@ -130,10 +135,9 @@ function clearAll() {
 
 init();
 
-// Modal Functions
+// Functions and Event Listeners from Bulma for creating a Modal
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Functions to open and close a modal
   function openModal($el) {
     $el.classList.add('is-active');
   }
@@ -148,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Add a click event on buttons to open a specific modal
   (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
     const modal = $trigger.dataset.target;
     const $target = document.getElementById(modal);
@@ -158,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Add a click event on various child elements to close the parent modal
   (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
     const $target = $close.closest('.modal');
 
@@ -167,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Add a keyboard event to close all modals
   document.addEventListener('keydown', (event) => {
     if(event.key === "Escape") {
       closeAllModals();
