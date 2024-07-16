@@ -63,11 +63,11 @@ ProjectPAL is a valuable tool for students to manage their projects efficiently.
 
 ## Deployment Link
 
-https://peruvpowwow.github.io/Challenge1/
+https://peruvpowwow.github.io/ProjectPal/
 
 ## Repository Link
 
-https://github.com/PeruvPowWow/Challenge1
+https://github.com/PeruvPowWow/ProjectPal
 
 
 ## Team Checklist
